@@ -3,6 +3,7 @@
 
 #include "Grabber.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "GameFramework/Actor.h"
 
 // Sets default values for this component's properties
 UGrabber::UGrabber()
@@ -29,8 +30,19 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 
 FVector UGrabber::GetMaxGrabLocation() const
 {
-	FVector Forward = UKismetMathLibrary::GetForwardVector(GetComponentRotation());
+	const FVector Forward = UKismetMathLibrary::GetForwardVector(GetComponentRotation());
 	return GetComponentLocation() + Forward * MaxGrabDistance;
+}
+
+FVector UGrabber::GetHoldLocation() const
+{
+	const FVector Forward = UKismetMathLibrary::GetForwardVector(GetComponentRotation());
+	return GetComponentLocation() + Forward * HoldDistance;
+}
+
+UPhysicsHandleComponent* UGrabber::GetPhysicsComponent() const
+{
+	return GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
 }
 
 

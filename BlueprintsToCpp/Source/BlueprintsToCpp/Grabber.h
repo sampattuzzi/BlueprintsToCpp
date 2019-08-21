@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
+#include "PhysicsEngine/PhysicsHandleComponent.h"
 #include "Grabber.generated.h"
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent), Blueprintable)
@@ -27,7 +28,15 @@ protected:
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	FVector GetMaxGrabLocation() const;
 
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	FVector GetHoldLocation() const;
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	UPhysicsHandleComponent* GetPhysicsComponent() const;
+
 	UPROPERTY(EditAnywhere, BlueprintReadonly)
 	float MaxGrabDistance = 100;
-		
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float HoldDistance = 100;
 };
