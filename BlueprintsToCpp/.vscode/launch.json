@@ -1,0 +1,128 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "BlueprintsToCpp (Debug)",
+			"request": "launch",
+			"preLaunchTask": "BlueprintsToCpp Win64 Debug Build",
+			"program": "C:\\Users\\Samuel Pattuzzi\\Documents\\Courses\\Unreal\\BlueprintsToCpp\\BlueprintsToCpp\\Binaries\\Win64\\BlueprintsToCpp-Win64-Debug.exe",
+			"args": [
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BlueprintsToCpp (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "BlueprintsToCpp Win64 DebugGame Build",
+			"program": "C:\\Users\\Samuel Pattuzzi\\Documents\\Courses\\Unreal\\BlueprintsToCpp\\BlueprintsToCpp\\Binaries\\Win64\\BlueprintsToCpp-Win64-DebugGame.exe",
+			"args": [
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BlueprintsToCpp (Development)",
+			"request": "launch",
+			"preLaunchTask": "BlueprintsToCpp Win64 Development Build",
+			"program": "C:\\Users\\Samuel Pattuzzi\\Documents\\Courses\\Unreal\\BlueprintsToCpp\\BlueprintsToCpp\\Binaries\\Win64\\BlueprintsToCpp.exe",
+			"args": [
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BlueprintsToCpp (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "BlueprintsToCpp Win64 Shipping Build",
+			"program": "C:\\Users\\Samuel Pattuzzi\\Documents\\Courses\\Unreal\\BlueprintsToCpp\\BlueprintsToCpp\\Binaries\\Win64\\BlueprintsToCpp-Win64-Shipping.exe",
+			"args": [
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BlueprintsToCpp (Test)",
+			"request": "launch",
+			"preLaunchTask": "BlueprintsToCpp Win64 Test Build",
+			"program": "C:\\Users\\Samuel Pattuzzi\\Documents\\Courses\\Unreal\\BlueprintsToCpp\\BlueprintsToCpp\\Binaries\\Win64\\BlueprintsToCpp-Win64-Test.exe",
+			"args": [
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BlueprintsToCppEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "BlueprintsToCppEditor Win64 Debug Build",
+			"program": "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Binaries\\Win64\\UE4Editor-Win64-Debug.exe",
+			"args": [
+				"C:\\Users\\Samuel Pattuzzi\\Documents\\Courses\\Unreal\\BlueprintsToCpp\\BlueprintsToCpp\\BlueprintsToCpp.uproject"
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BlueprintsToCppEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "BlueprintsToCppEditor Win64 DebugGame Build",
+			"program": "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"C:\\Users\\Samuel Pattuzzi\\Documents\\Courses\\Unreal\\BlueprintsToCpp\\BlueprintsToCpp\\BlueprintsToCpp.uproject"
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "BlueprintsToCppEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "BlueprintsToCppEditor Win64 Development Build",
+			"program": "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"C:\\Users\\Samuel Pattuzzi\\Documents\\Courses\\Unreal\\BlueprintsToCpp\\BlueprintsToCpp\\BlueprintsToCpp.uproject"
+			],
+			"cwd": "C:\\Program Files\\Epic Games\\UE_4.22",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "clr",
+			"request": "launch",
+			"program": "C:\\Program Files\\Epic Games\\UE_4.22\\Engine\\Binaries\\DotNET\\UnrealBuildTool.exe",
+			"console": "externalTerminal",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=\"C:\\Users\\Samuel Pattuzzi\\Documents\\Courses\\Unreal\\BlueprintsToCpp\\BlueprintsToCpp\\BlueprintsToCpp.uproject\"",
+				"-game",
+				"-engine"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"cwd": "C:\\Program Files\\Epic Games\\UE_4.22"
+		}
+	]
+}
