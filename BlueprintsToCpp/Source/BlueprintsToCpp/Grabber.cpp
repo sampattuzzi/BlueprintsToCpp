@@ -8,9 +8,10 @@ UGrabber::UGrabber()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
-	PrimaryComponentTick.bCanEverTick = true;
+	PrimaryComponentTick.bCanEverTick = true; // Can only unset if blueprint isn't ticking.
 
-	// ...
+	UE_LOG(LogTemp, Display, TEXT("Grabber constructor"));
+	// Show happeneing at edit time by adding to world.
 }
 
 
@@ -19,7 +20,7 @@ void UGrabber::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
+	UE_LOG(LogTemp, Display, TEXT("Grabber BeginPlay"));
 	
 }
 
@@ -29,6 +30,6 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// ...
+	UE_LOG(LogTemp, Display, TEXT("Grabber Tick"));
 }
 
