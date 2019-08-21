@@ -24,6 +24,9 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 protected:
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	FVector GetMaxGrabLocation() const;
+
 	UPROPERTY(EditAnywhere, BlueprintReadonly)
 	float MaxGrabDistance = 100;
 		
