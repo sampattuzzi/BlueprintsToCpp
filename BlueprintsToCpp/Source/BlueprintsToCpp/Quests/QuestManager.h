@@ -6,7 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "QuestManager.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class BLUEPRINTSTOCPP_API AQuestManager : public AActor
 {
 	GENERATED_BODY()
