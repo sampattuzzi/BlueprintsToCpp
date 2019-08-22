@@ -15,7 +15,7 @@ UGrabber::UGrabber()
 
 void UGrabber::Grab2()
 {
-	
+	NotifyQuestActor(nullptr);
 }
 
 

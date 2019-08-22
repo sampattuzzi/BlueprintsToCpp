@@ -30,6 +30,9 @@ public:
 protected:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	bool TraceForPhysicsBodies2(class AActor*& HitActor, class UPrimitiveComponent*& HitComponent);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void NotifyQuestActor(class AActor* Actor);
 	
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	FVector GetMaxGrabLocation() const;
