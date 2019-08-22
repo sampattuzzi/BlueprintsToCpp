@@ -16,6 +16,9 @@ public:
 	// Sets default values for this component's properties
 	UGrabber();
 
+	UFUNCTION(BlueprintCallable)
+	void Grab2();
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -25,6 +28,9 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 protected:
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+	bool TraceForPhysicsBodies2(class AActor*& HitActor, class UPrimitiveComponent*& HitComponent);
+	
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	FVector GetMaxGrabLocation() const;
 

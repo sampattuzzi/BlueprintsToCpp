@@ -13,6 +13,11 @@ UGrabber::UGrabber()
 	PrimaryComponentTick.bCanEverTick = true; // Can only unset if blueprint isn't ticking.
 }
 
+void UGrabber::Grab2()
+{
+	
+}
+
 
 // Called when the game starts
 void UGrabber::BeginPlay()
@@ -26,6 +31,11 @@ void UGrabber::BeginPlay()
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+}
+
+bool UGrabber::TraceForPhysicsBodies2_Implementation(AActor*& HitActor, UPrimitiveComponent*& HitComponent)
+{
+	return false;	
 }
 
 FVector UGrabber::GetMaxGrabLocation() const
