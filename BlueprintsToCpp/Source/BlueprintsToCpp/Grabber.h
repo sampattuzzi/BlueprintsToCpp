@@ -17,7 +17,10 @@ public:
 	UGrabber();
 
 	UFUNCTION(BlueprintCallable)
-	void Grab2();
+	void Grab();
+	
+	UFUNCTION(BlueprintCallable)
+	void Release();
 
 protected:
 	// Called when the game starts
@@ -29,11 +32,11 @@ public:
 
 protected:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
-	bool TraceForPhysicsBodies2(class AActor*& HitActor, class UPrimitiveComponent*& HitComponent);
+	bool TraceForPhysicsBodies(class AActor*& HitActor, class UPrimitiveComponent*& HitComponent);
 
 	UFUNCTION(BlueprintImplementableEvent)
 	void NotifyQuestActor(class AActor* Actor);
-	
+
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	FVector GetMaxGrabLocation() const;
 

@@ -4,6 +4,7 @@
 #include "Grabber.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "GameFramework/Actor.h"
+#include "Components/PrimitiveComponent.h"
 
 // Sets default values for this component's properties
 UGrabber::UGrabber()
@@ -13,9 +14,25 @@ UGrabber::UGrabber()
 	PrimaryComponentTick.bCanEverTick = true; // Can only unset if blueprint isn't ticking.
 }
 
-void UGrabber::Grab2()
+void UGrabber::Grab()
 {
-	NotifyQuestActor(nullptr);
+	AActor* HitActor;
+	UPrimitiveComponent* HitComponent;
+	if (TraceForPhysicsBodies(HitActor, HitComponent))
+	{
+		HitComponent->SetSimulatePhysics(true);
+		GetPhysicsComponent()->GrabComponentAtLocationWithRotation(
+			HitComponent, 
+			NAME_None, 
+			HitComponent->GetCenterOfMass(), 
+			FRotator());
+		NotifyQuestActor(HitActor);
+	}
+}
+
+void UGrabber::Release()
+{
+	GetPhysicsComponent()->ReleaseComponent();
 }
 
 
@@ -33,7 +50,7 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 }
 
-bool UGrabber::TraceForPhysicsBodies2_Implementation(AActor*& HitActor, UPrimitiveComponent*& HitComponent)
+bool UGrabber::TraceForPhysicsBodies_Implementation(AActor*& HitActor, UPrimitiveComponent*& HitComponent)
 {
 	return false;	
 }
