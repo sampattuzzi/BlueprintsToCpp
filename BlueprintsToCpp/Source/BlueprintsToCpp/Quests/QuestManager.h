@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "QuestManager.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCompletedQuestSignature, int, QuestIndex);
+
 UCLASS(Blueprintable)
 class BLUEPRINTSTOCPP_API AQuestManager : public AActor
 {
@@ -18,6 +20,8 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+	FCompletedQuestSignature OnCompletedQuest;
 
 public:	
 	// Called every frame

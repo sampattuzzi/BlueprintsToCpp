@@ -14,8 +14,7 @@ AQuestManager::AQuestManager()
 // Called when the game starts or when spawned
 void AQuestManager::BeginPlay()
 {
-	Super::BeginPlay();
-	
+	Super::BeginPlay();	
 }
 
 // Called every frame
