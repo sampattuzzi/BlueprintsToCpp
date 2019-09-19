@@ -2,6 +2,7 @@
 
 
 #include "FirstPersonCharacter.h"
+#include "Components/InputComponent.h"
 
 // Sets default values
 AFirstPersonCharacter::AFirstPersonCharacter()
@@ -30,5 +31,11 @@ void AFirstPersonCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInp
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	PlayerInputComponent->BindAxis(TEXT("Forward"), this, &AFirstPersonCharacter::Forward);
+}
+
+void AFirstPersonCharacter::Forward(float AxisValue)
+{
+	UE_LOG(LogTemp, Warning, TEXT("Forward %f!"), AxisValue);
 }
 
