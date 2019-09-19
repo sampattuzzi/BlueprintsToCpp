@@ -26,11 +26,13 @@ public:
 		FQuestInfo GetQuest(const FName& Name) const;
 	UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
 		bool IsActiveQuest(const FName& QuestId) const;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+		FCompletedQuestSignature OnCompletedQuest;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	UPROPERTY(BlueprintAssignable, BlueprintCallable)
-	FCompletedQuestSignature OnCompletedQuest;
 
 public:	
 	// Called every frame

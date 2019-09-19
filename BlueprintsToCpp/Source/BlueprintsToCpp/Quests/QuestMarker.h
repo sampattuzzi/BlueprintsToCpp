@@ -24,10 +24,6 @@ protected:
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
 	AQuestManager* GetManager() const;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 protected:
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	/*bool to make function*/void RefreshVisibility();
@@ -42,4 +38,8 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UParticleSystemComponent* ParticleSystem;
 
+private:
+	UFUNCTION()
+	void OnQuestCompleted(int32 Index);
+	
 };

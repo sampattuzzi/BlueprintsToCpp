@@ -6,9 +6,6 @@
 // Sets default values
 AQuestMarker::AQuestMarker()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
 	ParticleSystem = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("ParticleSystem"));
 	SetRootComponent(ParticleSystem);
 }
@@ -17,14 +14,13 @@ AQuestMarker::AQuestMarker()
 void AQuestMarker::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	GetManager()->OnCompletedQuest.AddDynamic(this, &AQuestMarker::OnQuestCompleted);
+	RefreshVisibility();
 }
 
-// Called every frame
-void AQuestMarker::Tick(float DeltaTime)
+void AQuestMarker::OnQuestCompleted(int32 Index)
 {
-	Super::Tick(DeltaTime);
-
+	RefreshVisibility();
 }
 
 void AQuestMarker::RefreshVisibility_Implementation()

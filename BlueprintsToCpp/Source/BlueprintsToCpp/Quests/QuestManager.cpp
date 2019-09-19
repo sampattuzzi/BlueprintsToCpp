@@ -24,6 +24,7 @@ void AQuestManager::CompleteQuest_Implementation(const FName& Name, bool Complet
 		Quest.Progress = FMath::Min(Quest.Progress + 1, Quest.ProgressTotal);
 	}
 	QuestList[QuestIndex] = Quest;
+	OnCompletedQuest.Broadcast(QuestIndex);
 }
 
 // Called when the game starts or when spawned
