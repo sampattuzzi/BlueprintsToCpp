@@ -13,7 +13,17 @@ AQuestManager::AQuestManager()
 
 void AQuestManager::CompleteQuest(const FName& Name, bool CompleteWholeQuest)
 {
-	
+	int32 QuestIndex = GetQuestIndex(Name);
+	FQuestInfo Quest = QuestList[QuestIndex];
+	if (CompleteWholeQuest)
+	{
+		Quest.Progress = Quest.ProgressTotal;
+	}
+	else
+	{
+		Quest.Progress = FMath::Min(Quest.Progress + 1, Quest.ProgressTotal);
+	}
+	QuestList[QuestIndex] = Quest;
 }
 
 // Called when the game starts or when spawned

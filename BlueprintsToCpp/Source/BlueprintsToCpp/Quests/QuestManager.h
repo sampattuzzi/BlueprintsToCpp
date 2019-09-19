@@ -19,8 +19,10 @@ public:
 	AQuestManager();
 
 	UFUNCTION(BlueprintCallable)
-	void CompleteQuest(const FName& Name, bool CompleteWholeQuest);
-	
+		void CompleteQuest(const FName& Name, bool CompleteWholeQuest);
+	UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
+		int32 GetQuestIndex(const FName& Name) const;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
