@@ -30,7 +30,8 @@ void AQuestMarker::Tick(float DeltaTime)
 void AQuestMarker::RefreshVisibility_Implementation()
 {
 	AQuestManager* Manager = GetManager();
-	//FQuestInfo Quest = Manager->GetQuest(QuestName)
-	//bool Visibility =
+	FQuestInfo Quest = Manager->GetQuest(QuestName);
+	bool Visibility = Manager->IsActiveQuest(Quest.QuestId) && Quest.Progress == ShowAtProgress;
+	ParticleSystem->SetVisibility(Visibility);
 }
 

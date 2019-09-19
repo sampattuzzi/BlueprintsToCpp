@@ -35,6 +35,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FName QuestName;
 
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 ShowAtProgress;
+	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UParticleSystemComponent* ParticleSystem;
 
