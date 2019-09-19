@@ -18,7 +18,7 @@ public:
 	// Sets default values for this actor's properties
 	AQuestManager();
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 		void CompleteQuest(const FName& Name, bool CompleteWholeQuest);
 	UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
 		int32 GetQuestIndex(const FName& Name) const;

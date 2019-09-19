@@ -11,7 +11,7 @@ AQuestManager::AQuestManager()
 
 }
 
-void AQuestManager::CompleteQuest(const FName& Name, bool CompleteWholeQuest)
+void AQuestManager::CompleteQuest_Implementation(const FName& Name, bool CompleteWholeQuest)
 {
 	int32 QuestIndex = GetQuestIndex(Name);
 	FQuestInfo Quest = QuestList[QuestIndex];

@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "QuestManager.h"
+#include "Particles/ParticleSystemComponent.h"
 #include "QuestMarker.generated.h"
 
 UCLASS()
@@ -33,5 +34,8 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FName QuestName;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UParticleSystemComponent* ParticleSystem;
 
 };
