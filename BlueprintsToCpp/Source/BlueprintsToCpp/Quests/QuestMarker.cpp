@@ -25,3 +25,10 @@ void AQuestMarker::Tick(float DeltaTime)
 
 }
 
+void AQuestMarker::RefreshVisibility_Implementation()
+{
+	AQuestManager* Manager = GetManager();
+	//FQuestInfo Quest = Manager->GetQuest(QuestName)
+	//bool Visibility =
+}
+

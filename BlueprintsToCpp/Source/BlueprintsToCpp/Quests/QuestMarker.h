@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "QuestManager.h"
 #include "QuestMarker.generated.h"
 
 UCLASS()
@@ -19,8 +20,18 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+	AQuestManager* GetManager() const;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+protected:
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	/*bool to make function*/void RefreshVisibility();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName QuestName;
 
 };

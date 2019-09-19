@@ -22,7 +22,10 @@ public:
 		void CompleteQuest(const FName& Name, bool CompleteWholeQuest);
 	UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
 		int32 GetQuestIndex(const FName& Name) const;
-
+	UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
+		FQuestInfo GetQuest(const FName& Name) const;
+	UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
+		bool IsActiveQuest(const FName& QuestId) const;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
