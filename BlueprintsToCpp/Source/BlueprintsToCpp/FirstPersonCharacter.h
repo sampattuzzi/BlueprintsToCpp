@@ -28,5 +28,6 @@ public:
 
 private:
 	void Forward(float AxisValue);
+	void Jump();
 
 };
