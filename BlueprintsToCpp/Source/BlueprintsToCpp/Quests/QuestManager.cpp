@@ -11,6 +11,11 @@ AQuestManager::AQuestManager()
 
 }
 
+void AQuestManager::CompleteQuest(const FName& Name, bool CompleteWholeQuest)
+{
+	
+}
+
 // Called when the game starts or when spawned
 void AQuestManager::BeginPlay()
 {
