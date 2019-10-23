@@ -24,5 +24,7 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float MaxGrabDistance = 100;
 };
