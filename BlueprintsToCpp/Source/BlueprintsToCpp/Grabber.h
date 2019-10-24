@@ -30,6 +30,9 @@ protected:
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	UPhysicsHandleComponent* GetPhysicsComponent() const;
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void NotifyQuestActor(AActor* Actor);
+
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
