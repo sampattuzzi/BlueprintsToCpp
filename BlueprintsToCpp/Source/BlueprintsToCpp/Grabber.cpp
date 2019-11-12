@@ -17,6 +17,28 @@ UGrabber::UGrabber()
 }
 
 
+void UGrabber::Grab()
+{
+	AActor* HitActor;
+	UPrimitiveComponent* HitComponent;
+	if (TraceForPhysicsBodies(HitActor, HitComponent))
+	{
+		HitComponent->SetSimulatePhysics(true);
+		GetPhysicsComponent()->GrabComponentAtLocationWithRotation(
+			HitComponent,
+			NAME_None,
+			HitComponent->GetCenterOfMass(),
+			FRotator()
+		);
+		NotifyQuestActor(HitActor);
+	}
+}
+
+void UGrabber::Release()
+{
+	GetPhysicsComponent()->ReleaseComponent();
+}
+
 // Called when the game starts
 void UGrabber::BeginPlay()
 {
